@@ -22,385 +22,385 @@
             android:id="@+id/S000"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S010"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S020"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S030"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S040"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S050"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S060"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S070"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S001"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S011"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S021"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S031"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S041"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S051"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S061"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S071"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S002"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S012"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S022"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S032"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S042"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S052"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S062"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S072"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S003"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S013"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S023"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S033"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S043"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S053"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S063"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S073"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S004"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S014"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S024"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S034"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S044"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S054"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S064"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S074"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S005"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S015"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S025"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S035"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S045"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S055"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S065"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S075"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S006"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S016"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S026"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S036"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S046"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S056"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S066"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S076"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S007"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S017"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S027"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S037"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S047"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S057"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S067"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/cream" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S077"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/tan" />
+            android:background="@color/black_square" />
 
     </GridLayout>
 
