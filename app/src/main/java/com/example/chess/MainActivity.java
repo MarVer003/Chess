@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.chess.Pieces.Bishop;
 import com.example.chess.Pieces.King;
@@ -21,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     TextView[][] displayBoard = new TextView[8][8];
     Position[][] board = new Position[8][8];
     Coordinates clickedPosition = new Coordinates();
-    Coordinates selectedPiecePos = new Coordinates();
+    Coordinates selectedPiecePos;
 
     boolean whiteTurn;
     boolean somethingSelected;
@@ -73,154 +75,23 @@ public class MainActivity extends AppCompatActivity {
 
         findViewByIds();
         InitializeBoard();
-
     }
 
+    @SuppressLint("DiscouragedApi")
     private void findViewByIds() {
-        displayBoard[0][0] = findViewById(R.id.S00);
-        displayBoard[0][1] = findViewById(R.id.S01);
-        displayBoard[0][2] = findViewById(R.id.S02);
-        displayBoard[0][3] = findViewById(R.id.S03);
-        displayBoard[0][4] = findViewById(R.id.S04);
-        displayBoard[0][5] = findViewById(R.id.S05);
-        displayBoard[0][6] = findViewById(R.id.S06);
-        displayBoard[0][7] = findViewById(R.id.S07);
 
-        displayBoard[1][0] = findViewById(R.id.S10);
-        displayBoard[1][1] = findViewById(R.id.S11);
-        displayBoard[1][2] = findViewById(R.id.S12);
-        displayBoard[1][3] = findViewById(R.id.S13);
-        displayBoard[1][4] = findViewById(R.id.S14);
-        displayBoard[1][5] = findViewById(R.id.S15);
-        displayBoard[1][6] = findViewById(R.id.S16);
-        displayBoard[1][7] = findViewById(R.id.S17);
+        for (int x = 0; x < 8; x++) {
+            for (int y = 0; y < 8; y++) {
+                int viewId = getResources().getIdentifier("S" + x + y, "id", getPackageName());
+                displayBoard[x][y] = findViewById(viewId);
 
-        displayBoard[2][0] = findViewById(R.id.S20);
-        displayBoard[2][1] = findViewById(R.id.S21);
-        displayBoard[2][2] = findViewById(R.id.S22);
-        displayBoard[2][3] = findViewById(R.id.S23);
-        displayBoard[2][4] = findViewById(R.id.S24);
-        displayBoard[2][5] = findViewById(R.id.S25);
-        displayBoard[2][6] = findViewById(R.id.S26);
-        displayBoard[2][7] = findViewById(R.id.S27);
+                int backgroundViewId = getResources().getIdentifier("S0" + x + y, "id", getPackageName());
+                backgroundBoard[x][y] = findViewById(backgroundViewId);
 
-        displayBoard[3][0] = findViewById(R.id.S30);
-        displayBoard[3][1] = findViewById(R.id.S31);
-        displayBoard[3][2] = findViewById(R.id.S32);
-        displayBoard[3][3] = findViewById(R.id.S33);
-        displayBoard[3][4] = findViewById(R.id.S34);
-        displayBoard[3][5] = findViewById(R.id.S35);
-        displayBoard[3][6] = findViewById(R.id.S36);
-        displayBoard[3][7] = findViewById(R.id.S37);
-
-        displayBoard[4][0] = findViewById(R.id.S40);
-        displayBoard[4][1] = findViewById(R.id.S41);
-        displayBoard[4][2] = findViewById(R.id.S42);
-        displayBoard[4][3] = findViewById(R.id.S43);
-        displayBoard[4][4] = findViewById(R.id.S44);
-        displayBoard[4][5] = findViewById(R.id.S45);
-        displayBoard[4][6] = findViewById(R.id.S46);
-        displayBoard[4][7] = findViewById(R.id.S47);
-
-        displayBoard[5][0] = findViewById(R.id.S50);
-        displayBoard[5][1] = findViewById(R.id.S51);
-        displayBoard[5][2] = findViewById(R.id.S52);
-        displayBoard[5][3] = findViewById(R.id.S53);
-        displayBoard[5][4] = findViewById(R.id.S54);
-        displayBoard[5][5] = findViewById(R.id.S55);
-        displayBoard[5][6] = findViewById(R.id.S56);
-        displayBoard[5][7] = findViewById(R.id.S57);
-
-        displayBoard[6][0] = findViewById(R.id.S60);
-        displayBoard[6][1] = findViewById(R.id.S61);
-        displayBoard[6][2] = findViewById(R.id.S62);
-        displayBoard[6][3] = findViewById(R.id.S63);
-        displayBoard[6][4] = findViewById(R.id.S64);
-        displayBoard[6][5] = findViewById(R.id.S65);
-        displayBoard[6][6] = findViewById(R.id.S66);
-        displayBoard[6][7] = findViewById(R.id.S67);
-
-        displayBoard[7][0] = findViewById(R.id.S70);
-        displayBoard[7][1] = findViewById(R.id.S71);
-        displayBoard[7][2] = findViewById(R.id.S72);
-        displayBoard[7][3] = findViewById(R.id.S73);
-        displayBoard[7][4] = findViewById(R.id.S74);
-        displayBoard[7][5] = findViewById(R.id.S75);
-        displayBoard[7][6] = findViewById(R.id.S76);
-        displayBoard[7][7] = findViewById(R.id.S77);
-
-        backgroundBoard[0][0] = findViewById(R.id.S000);
-        backgroundBoard[0][1] = findViewById(R.id.S001);
-        backgroundBoard[0][2] = findViewById(R.id.S002);
-        backgroundBoard[0][3] = findViewById(R.id.S003);
-        backgroundBoard[0][4] = findViewById(R.id.S004);
-        backgroundBoard[0][5] = findViewById(R.id.S005);
-        backgroundBoard[0][6] = findViewById(R.id.S006);
-        backgroundBoard[0][7] = findViewById(R.id.S007);
-
-        backgroundBoard[1][0] = findViewById(R.id.S010);
-        backgroundBoard[1][1] = findViewById(R.id.S011);
-        backgroundBoard[1][2] = findViewById(R.id.S012);
-        backgroundBoard[1][3] = findViewById(R.id.S013);
-        backgroundBoard[1][4] = findViewById(R.id.S014);
-        backgroundBoard[1][5] = findViewById(R.id.S015);
-        backgroundBoard[1][6] = findViewById(R.id.S016);
-        backgroundBoard[1][7] = findViewById(R.id.S017);
-
-        backgroundBoard[2][0] = findViewById(R.id.S020);
-        backgroundBoard[2][1] = findViewById(R.id.S021);
-        backgroundBoard[2][2] = findViewById(R.id.S022);
-        backgroundBoard[2][3] = findViewById(R.id.S023);
-        backgroundBoard[2][4] = findViewById(R.id.S024);
-        backgroundBoard[2][5] = findViewById(R.id.S025);
-        backgroundBoard[2][6] = findViewById(R.id.S026);
-        backgroundBoard[2][7] = findViewById(R.id.S027);
-
-        backgroundBoard[3][0] = findViewById(R.id.S030);
-        backgroundBoard[3][1] = findViewById(R.id.S031);
-        backgroundBoard[3][2] = findViewById(R.id.S032);
-        backgroundBoard[3][3] = findViewById(R.id.S033);
-        backgroundBoard[3][4] = findViewById(R.id.S034);
-        backgroundBoard[3][5] = findViewById(R.id.S035);
-        backgroundBoard[3][6] = findViewById(R.id.S036);
-        backgroundBoard[3][7] = findViewById(R.id.S037);
-
-        backgroundBoard[4][0] = findViewById(R.id.S040);
-        backgroundBoard[4][1] = findViewById(R.id.S041);
-        backgroundBoard[4][2] = findViewById(R.id.S042);
-        backgroundBoard[4][3] = findViewById(R.id.S043);
-        backgroundBoard[4][4] = findViewById(R.id.S044);
-        backgroundBoard[4][5] = findViewById(R.id.S045);
-        backgroundBoard[4][6] = findViewById(R.id.S046);
-        backgroundBoard[4][7] = findViewById(R.id.S047);
-
-        backgroundBoard[5][0] = findViewById(R.id.S050);
-        backgroundBoard[5][1] = findViewById(R.id.S051);
-        backgroundBoard[5][2] = findViewById(R.id.S052);
-        backgroundBoard[5][3] = findViewById(R.id.S053);
-        backgroundBoard[5][4] = findViewById(R.id.S054);
-        backgroundBoard[5][5] = findViewById(R.id.S055);
-        backgroundBoard[5][6] = findViewById(R.id.S056);
-        backgroundBoard[5][7] = findViewById(R.id.S057);
-
-        backgroundBoard[6][0] = findViewById(R.id.S060);
-        backgroundBoard[6][1] = findViewById(R.id.S061);
-        backgroundBoard[6][2] = findViewById(R.id.S062);
-        backgroundBoard[6][3] = findViewById(R.id.S063);
-        backgroundBoard[6][4] = findViewById(R.id.S064);
-        backgroundBoard[6][5] = findViewById(R.id.S065);
-        backgroundBoard[6][6] = findViewById(R.id.S066);
-        backgroundBoard[6][7] = findViewById(R.id.S067);
-
-        backgroundBoard[7][0] = findViewById(R.id.S070);
-        backgroundBoard[7][1] = findViewById(R.id.S071);
-        backgroundBoard[7][2] = findViewById(R.id.S072);
-        backgroundBoard[7][3] = findViewById(R.id.S073);
-        backgroundBoard[7][4] = findViewById(R.id.S074);
-        backgroundBoard[7][5] = findViewById(R.id.S075);
-        backgroundBoard[7][6] = findViewById(R.id.S076);
-        backgroundBoard[7][7] = findViewById(R.id.S077);
-
+                if(viewId == 0 || backgroundViewId == 0)
+                    Toast.makeText(this, "Something is not right", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     private void InitializeBoard() {
@@ -326,6 +197,7 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("NonConstantResourceId")
     public void onClick(View view) {
+
 
         clickedPosition = new Coordinates();
         switch (view.getId()) {
@@ -589,21 +461,22 @@ public class MainActivity extends AppCompatActivity {
 
         int x = clickedPosition.getX();
         int y = clickedPosition.getY();
+        Position pressedSquare = board[x][y];
 
-        Piece tmpPiece = board[x][y].getPiece();
-        if(tmpPiece != null) {
+        if(pressedSquare.getPiece() != null && (whiteTurn == pressedSquare.getPiece().isWhite())) {
+
             if(selectedPiecePos != null)
                 returnColor(selectedPiecePos.getX(), selectedPiecePos.getY());
             selectedPiecePos = clickedPosition;
-            if(colorWhite(x, y))
+            if(squareWhite(x, y))
                 backgroundBoard[x][y].setBackgroundColor(getColor(R.color.white_selected_square));
             else
                 backgroundBoard[x][y].setBackgroundColor(getColor(R.color.black_selected_square));
 
         } else if(selectedPiecePos != null) {
-            board[x][y].setPiece(board[selectedPiecePos.getX()][selectedPiecePos.getY()].getPiece());
-            refreshBoard(selectedPiecePos, clickedPosition);
 
+            whiteTurn = !whiteTurn;
+            movePiece(selectedPiecePos, clickedPosition);
             returnColor(selectedPiecePos.getX(), selectedPiecePos.getY());
             selectedPiecePos = null;
         }
@@ -611,13 +484,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void returnColor(int x, int y) {
 
-        if(colorWhite(x, y))
+        if(squareWhite(x, y))
             backgroundBoard[x][y].setBackgroundColor(getColor(R.color.white_square));
         else
             backgroundBoard[x][y].setBackgroundColor(getColor(R.color.black_square));
     }
 
-    private boolean colorWhite(int x, int y) {
+    private boolean squareWhite(int x, int y) {
         if(x % 2 == 0) {
             return y % 2 != 0;
         }
@@ -626,7 +499,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void refreshBoard(Coordinates beforePos, Coordinates afterPos) {
+    private void movePiece(Coordinates beforePos, Coordinates afterPos) {
         Piece tmpPiece = board[beforePos.getX()][beforePos.getY()].getPiece();
 
         board[beforePos.getX()][beforePos.getY()].setPiece(null);

@@ -529,7 +529,8 @@
             android:clickable="true"
             android:elevation="1dp"
             android:longClickable="false"
-            android:onClick="onClick" />
+            android:onClick="onClick"
+            tools:ignore="tooManyViews"/>
 
         <TextView
             android:id="@+id/S51"
