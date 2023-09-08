@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +16,8 @@ import com.example.chess.Pieces.Piece;
 import com.example.chess.Pieces.Queen;
 import com.example.chess.Pieces.Rook;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView[][] backgroundBoard = new TextView[8][8];
@@ -25,8 +26,7 @@ public class MainActivity extends AppCompatActivity {
     Coordinates clickedPosition = new Coordinates();
     Coordinates selectedPiecePos;
 
-    boolean whiteTurn;
-    boolean somethingSelected;
+    public static boolean whiteTurn;
 
     Piece w_king;
     Piece b_king;
@@ -475,8 +475,12 @@ public class MainActivity extends AppCompatActivity {
 
         } else if(selectedPiecePos != null) {
 
-            whiteTurn = !whiteTurn;
-            movePiece(selectedPiecePos, clickedPosition);
+            if(movePiece(selectedPiecePos, clickedPosition)) {
+
+                whiteTurn = !whiteTurn;
+
+            }
+
             returnColor(selectedPiecePos.getX(), selectedPiecePos.getY());
             selectedPiecePos = null;
         }
@@ -499,15 +503,25 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void movePiece(Coordinates beforePos, Coordinates afterPos) {
+    private boolean movePiece(Coordinates beforePos, Coordinates afterPos) {
         Piece tmpPiece = board[beforePos.getX()][beforePos.getY()].getPiece();
 
-        board[beforePos.getX()][beforePos.getY()].setPiece(null);
-        displayBoard[beforePos.getX()][beforePos.getY()].setBackgroundResource(0);
+        ArrayList<Coordinates> allowedMoves = tmpPiece.allowedMoves(board, beforePos);
 
-        board[afterPos.getX()][afterPos.getY()].setPiece(tmpPiece);
-        displayBoard[afterPos.getX()][afterPos.getY()].setBackgroundResource(pieceDisplay(tmpPiece));
+        if(allowedMoves != null) {
+            for (Coordinates move : allowedMoves) {
+                if (move.getX() == afterPos.getX() && move.getY() == afterPos.getY()) {
+                    board[beforePos.getX()][beforePos.getY()].setPiece(null);
+                    displayBoard[beforePos.getX()][beforePos.getY()].setBackgroundResource(0);
 
+                    board[afterPos.getX()][afterPos.getY()].setPiece(tmpPiece);
+                    displayBoard[afterPos.getX()][afterPos.getY()].setBackgroundResource(pieceDisplay(tmpPiece));
+
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     private int pieceDisplay(Piece piece) {

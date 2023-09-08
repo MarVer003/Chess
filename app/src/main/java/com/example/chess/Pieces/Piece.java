@@ -1,17 +1,22 @@
 package com.example.chess.Pieces;
 
+import java.util.ArrayList;
+
 import com.example.chess.Coordinates;
+import com.example.chess.Position;
 
-public class Piece {
+public abstract class Piece {
 
-    private boolean white;
+    private final boolean WHITE;
 
     public Piece(boolean white) {
-        this.white = white;
+        this.WHITE = white;
     }
 
     public boolean isWhite() {
-        return white;
+        return WHITE;
     }
+
+    public abstract ArrayList<Coordinates> allowedMoves(Position[][] board, Coordinates coordinates);
 
 }
