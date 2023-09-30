@@ -5,10 +5,11 @@
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/charcoal"
+    android:background="@color/charcoal_3"
     tools:context=".MainActivity">
 
     <GridLayout
+        android:id="@+id/gridLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:columnCount="8"
@@ -18,389 +19,390 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <TextView
             android:id="@+id/S000"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S010"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S020"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S030"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S040"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S050"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S060"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S070"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S001"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S011"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S021"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S031"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S041"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S051"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S061"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S071"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S002"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S012"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S022"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S032"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S042"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S052"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S062"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S072"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S003"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S013"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S023"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S033"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S043"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S053"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S063"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S073"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S004"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S014"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S024"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S034"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S044"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S054"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S064"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S074"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S005"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S015"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S025"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S035"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S045"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S055"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S065"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S075"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S006"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S016"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S026"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S036"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S046"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S056"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S066"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S076"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S007"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S017"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S027"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S037"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S047"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S057"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
         <TextView
             android:id="@+id/S067"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/white_square" />
+            android:background="@color/black_square" />
 
         <TextView
             android:id="@+id/S077"
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:background="@color/black_square" />
+            android:background="@color/white_square" />
 
     </GridLayout>
 
@@ -421,7 +423,7 @@
             android:clickable="true"
             android:elevation="1dp"
             android:longClickable="false"
-            android:onClick="onClick" />
+            android:onClick="onClick"/>
 
         <TextView
             android:id="@+id/S10"
@@ -530,7 +532,7 @@
             android:elevation="1dp"
             android:longClickable="false"
             android:onClick="onClick"
-            tools:ignore="tooManyViews"/>
+            tools:ignore="tooManyViews" />
 
         <TextView
             android:id="@+id/S51"
@@ -992,4 +994,145 @@
             android:onClick="onClick" />
 
     </GridLayout>
+
+    <GridLayout
+        android:id="@+id/gridLayer3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="8"
+        android:rowCount="8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/B_newGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/charcoal_2"
+        android:text="New Game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/B_undo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <Button
+        android:id="@+id/B_undo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/charcoal_2"
+        android:text="Undo"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/B_newGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/B_newGame"
+        app:layout_constraintTop_toTopOf="@+id/B_newGame" />
+
+    <LinearLayout
+        android:id="@+id/pawnPromotionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/IB_queen"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/w_queen"
+            android:onClick="onPromotionClick" />
+
+        <ImageButton
+            android:id="@+id/IB_rook"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/w_rook"
+            android:onClick="onPromotionClick" />
+
+        <ImageButton
+            android:id="@+id/IB_bishop"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/w_bishop"
+            android:onClick="onPromotionClick" />
+
+        <ImageButton
+            android:id="@+id/IB_knight"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/w_knight"
+            android:onClick="onPromotionClick" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/endingCardLayout"
+        android:layout_width="375dp"
+        android:layout_height="300dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/TW_winDrawLost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="WIN - DRAW - LOST"
+            android:textAllCaps="true"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/TW_resultWhy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="why"
+            android:layout_marginTop="30dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/TW_winDrawLost"
+            app:layout_constraintStart_toStartOf="@+id/TW_winDrawLost"
+            app:layout_constraintEnd_toEndOf="@+id/TW_winDrawLost"/>
+
+        <Button
+            android:id="@+id/B_closeResultCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Close"
+            android:backgroundTint="@color/charcoal"
+            app:layout_constraintStart_toStartOf="@+id/TW_winDrawLost"
+            app:layout_constraintEnd_toEndOf="@+id/TW_winDrawLost"
+            app:layout_constraintTop_toBottomOf="@+id/TW_resultWhy"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/TW_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,12 @@ public class Queen extends Piece {
     }
 
     @Override
-    public ArrayList<Coordinates> allowedMoves(Position[][] board, Coordinates coordinates) {
-        return null;
+    public ArrayList<Coordinates> allowedMoves(Position[][] board, Coordinates piecePosition) {
+
+        ArrayList<Coordinates> allowedMoves = new ArrayList<>();
+        allowedMoves.addAll(new Bishop(this.isWhite()).allowedMoves(board, piecePosition));
+        allowedMoves.addAll(new Rook(this.isWhite()).allowedMoves(board, piecePosition));
+
+        return allowedMoves;
     }
 }
