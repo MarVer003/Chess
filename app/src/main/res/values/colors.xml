@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="charcoal">#385E50</color>
-    <color name="charcoal_2">#122003</color>
-    <color name="charcoal_3">#FF122620</color>
+    <color name="charcoal_3">#132B5A</color>
+    <color name="charcoal_2">#5D83C6</color>
+    <color name="charcoal">#5D83C6</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white_square">#FFF4EBD0</color>FFF4EBD0

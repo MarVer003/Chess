@@ -2,7 +2,6 @@ package com.example.chess;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -18,8 +17,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -136,22 +133,11 @@ public class HomeActivity extends AppCompatActivity implements RecyclerViewInter
 
             Intent discoverableIntent;
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_SCAN) == PackageManager.PERMISSION_GRANTED) {
-                if (bluetoothAdapter.getScanMode() != BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE) {
-                    discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
-                    startActivity(discoverableIntent);
-
-                }
-                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
-                intent.putExtra("Bluetooth", true);
-                intent.putExtra("Server", true);
-                startActivity(intent);
             }
-            if(Build.VERSION.SDK_INT <= Build.VERSION_CODES.S) {
-                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
-                intent.putExtra("Bluetooth", true);
-                intent.putExtra("Server", true);
-                startActivity(intent);
-            }
+            Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+            intent.putExtra("Bluetooth", true);
+            intent.putExtra("Server", true);
+            startActivity(intent);
         });
 
         B_client.setOnClickListener(v -> {
@@ -364,8 +350,6 @@ public class HomeActivity extends AppCompatActivity implements RecyclerViewInter
         intent.putExtra("Bluetooth", true);
         intent.putExtra("Bluetooth Device", device);
         startActivity(intent);
-
-        bluetoothService.connect(pairedDevices.get(position).getBluetoothDevice());
 
     }
 }

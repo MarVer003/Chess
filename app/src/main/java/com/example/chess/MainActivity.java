@@ -29,7 +29,6 @@ import com.example.chess.Pieces.Queen;
 import com.example.chess.Pieces.Rook;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 @SuppressLint("SetTextI18n")
 public class MainActivity extends AppCompatActivity {
@@ -55,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     Button B_newGame;
-//    Button B_undo;
     Button B_closeResultCard;
 
     ConstraintLayout endingCardLayout;
@@ -78,8 +76,6 @@ public class MainActivity extends AppCompatActivity {
     Coordinates selectedPiecePos;
     Coordinates pawnPromotingPos;
     Coordinates pawnPromotingPosBefore;
-//    MoveInfo moveInfo = new MoveInfo(null, null, null, null, null);
-//    ArrayList<MoveInfo> movesHistory = new ArrayList<>();
 
     ArrayList<Coordinates> allowedMoves = new ArrayList<>();
 
@@ -179,6 +175,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupGrid() {
 
+        int pixelsWidth = getResources().getDisplayMetrics().widthPixels;
+        int pixelsSquare = pixelsWidth / 8;
+        // TODO: fill any screen with chessboard
+
         GridLayout gridLayout = findViewById(R.id.gridLayer3);
 
         for (int i = 0; i < 8; i++) {
@@ -222,7 +222,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         B_newGame = findViewById(R.id.B_newGame);
-//        B_undo = findViewById(R.id.B_undo);
         B_closeResultCard = findViewById(R.id.B_closeResultCard);
 
         pawnPromotionLayout = findViewById(R.id.pawnPromotionLayout);
@@ -242,7 +241,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(bluetoothGame) {
             B_newGame.setEnabled(false);
-            gamePause = true;
+            gamePause = !server;
         }
         else {
         gamePause = false;
@@ -252,7 +251,6 @@ public class MainActivity extends AppCompatActivity {
         whiteTurn = true;
         kingInDanger = false;
         pawnPromotionLayout.setVisibility(View.GONE);
-//        B_undo.setEnabled(false);
 
 
         // white
@@ -362,80 +360,7 @@ public class MainActivity extends AppCompatActivity {
 
         B_closeResultCard.setOnClickListener(v -> endingCardLayout.setVisibility(View.GONE));
 
-//        B_undo.setOnClickListener(v -> undoMove());
-
     }
-
-//    private void undoMove() {
-//
-//        MoveInfo move = movesHistory.get(movesHistory.size()-1);
-//        Piece beforePiece = move.getPieceBefore();
-//        Piece afterPiece = move.getPieceAfter();
-//        Piece eatenPiece = move.getEatenPiece();
-//        Coordinates beforePos = move.getPositionBefore();
-//        Coordinates afterPos = move.getPositionAfter();
-//        boolean leftCastle = move.isLeftCastle();
-//        boolean rightCastle = move.isRightCastle();
-//        boolean enPassant = move.isEnPassant();
-//
-////        TODO: when castles were already available, they shouldn't become available again after undo
-////        TODO: EnPassant undo doesn't work
-//        if(!whiteTurn) {
-//            if(leftCastle) {
-//                board[0][7].setPiece(w_rook1);
-//                board[3][7].setPiece(null);
-//                displayBoard[0][7].setBackgroundResource(pieceDisplay(w_rook1));
-//                displayBoard[3][7].setBackgroundResource(0);
-//                w_rook1.setCastleable(true);
-//                w_king.setCastleable(true);
-//            }
-//            if(rightCastle) {
-//                board[7][7].setPiece(w_rook2);
-//                board[5][7].setPiece(null);
-//                displayBoard[7][7].setBackgroundResource(pieceDisplay(w_rook2));
-//                displayBoard[5][7].setBackgroundResource(0);
-//                w_rook2.setCastleable(true);
-//                w_king.setCastleable(true);
-//            }
-//            if(enPassant) {
-////                board[enPassantablePeasant.getX()][enPassantablePeasant.getY()].setPiece(new Pawn(!whiteTurn));
-////                displayBoard[enPassantablePeasant.getX()][enPassantablePeasant.getY()].setBackgroundResource(pieceDisplay(b_pawn1));
-//
-//            }
-//        }
-//        else {
-//            if(leftCastle) {
-//                board[0][0].setPiece(b_rook1);
-//                board[3][0].setPiece(null);
-//                displayBoard[0][0].setBackgroundResource(pieceDisplay(b_rook1));
-//                displayBoard[3][0].setBackgroundResource(0);
-//                b_rook1.setCastleable(true);
-//                b_king.setCastleable(true);
-//            }
-//            if(rightCastle) {
-//                board[7][0].setPiece(b_rook2);
-//                board[5][0].setPiece(null);
-//                displayBoard[7][0].setBackgroundResource(pieceDisplay(b_rook2));
-//                displayBoard[5][0].setBackgroundResource(0);
-//                b_rook2.setCastleable(true);
-//                b_king.setCastleable(true);
-//            }
-//        }
-//
-//        board[afterPos.getX()][afterPos.getY()].setPiece(eatenPiece);
-//        displayBoard[afterPos.getX()][afterPos.getY()].setBackgroundResource(pieceDisplay(eatenPiece));
-//
-//        board[beforePos.getX()][beforePos.getY()].setPiece(beforePiece);
-//        displayBoard[beforePos.getX()][beforePos.getY()].setBackgroundResource(pieceDisplay(beforePiece));
-//
-//        movesHistory.remove(movesHistory.size()-1);
-//
-//        if(movesHistory.size() == 0)
-//            B_undo.setEnabled(false);
-//
-//        afterMoveLogic();
-//
-//    }
 
     @SuppressLint("NonConstantResourceId")
     public void onClick(View view) {
