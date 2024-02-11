@@ -1,3 +1,6 @@
+## To launch the app
+* Download the app apk file from [here](https://github.com/MarVer003/Chess/edit/master/apk/).
+
 # Bluetooth Chess Application for Android
 
 This repository houses a chess application built for Android using Java and XML within Android Studio. The current version of the application includes two distinct game modes:
