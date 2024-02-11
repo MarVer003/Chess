@@ -26,6 +26,22 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+
+    signingConfigs {
+        release {
+            storeFile file('C:/Users/marti/OneDrive/Namizje/Chess/keystore/chess_keystore.jks') // Replace with the path to your keystore file
+            storePassword 'sahProjekt'
+            keyAlias 'chess_key'
+            keyPassword 'sahProjekt'
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+    }
 }
 
 dependencies {
