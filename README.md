@@ -33,7 +33,7 @@ This repository houses a chess application built for Android using Java and XML 
 
 <img src="https://github.com/MarVer003/Chess/assets/121672530/9a710d80-11a0-4cd3-9fcb-9bce542d38c8" width="30%" height="30%"/>
 
-<img src="https://github.com/MarVer003/Chess/assets/121672530/9d9636e1-d83e-42cb-829d-3e8f9ad1ece0" width="30%" height="30%"/>
+<img src="https://github.com/MarVer003/Chess/assets/121672530/ad5280f0-1d81-4a19-9caa-b7fc77dabc5d" width="30%" height="30%"/>
 
 <img src="https://github.com/MarVer003/Chess/assets/121672530/acc3753b-09fc-4243-aaec-f99af230dcfc" width="30%" height="30%"/>
 
