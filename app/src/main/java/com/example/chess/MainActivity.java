@@ -6,13 +6,16 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothDevice;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageView;
@@ -146,8 +149,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         afterActivityOpenLogic(getIntent());
-        setupGrid();
         findViewByIds();
+        setupGrid();
         initializeBoard();
         onClickListeners();
         setupSounds();
@@ -177,7 +180,10 @@ public class MainActivity extends AppCompatActivity {
 
         int pixelsWidth = getResources().getDisplayMetrics().widthPixels;
         int pixelsSquare = pixelsWidth / 8;
-        // TODO: fill any screen with chessboard
+        // TODO: fill any screen with chessboard by width
+        // You'll need to remove all xml squares and make them here in java, that goes for both Sxx and S0xx.
+        // You can use View.generateViewId() and then you can use SparseArray to store them or maybe HashMap.
+        // You'll also need to create another clickListener, because that onClick method won't work anymore.
 
         GridLayout gridLayout = findViewById(R.id.gridLayer3);
 
@@ -185,14 +191,15 @@ public class MainActivity extends AppCompatActivity {
             for (int j = 0; j < 8; j++) {
                 movesBoard[i][j] = new TextView(this);
                 movesBoard[i][j].setElevation(2);
-
                 GridLayout.LayoutParams params = new GridLayout.LayoutParams();
-                params.width = dpToPx(43);
-                params.height = dpToPx(43);
+                params.width = pixelsSquare;
+                params.height = pixelsSquare;
                 params.columnSpec = GridLayout.spec(i);
                 params.rowSpec = GridLayout.spec(j);
-                movesBoard[i][j].setLayoutParams(params);
 
+                movesBoard[i][j].setLayoutParams(params);
+                displayBoard[i][j].setLayoutParams(params);
+                backgroundBoard[i][j].setLayoutParams(params);
                 gridLayout.addView(movesBoard[i][j]);
             }
         }
